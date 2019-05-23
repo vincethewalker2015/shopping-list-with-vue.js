@@ -1,0 +1,13 @@
+.tasklist {
+    padding-top: 2em;
+}
+
+.task.done {
+    background: lightgrey;
+    color: #939194;
+}
+
+.task.todo {
+    background: lightgoldenrodyellow;
+    color: #627F39;
+}

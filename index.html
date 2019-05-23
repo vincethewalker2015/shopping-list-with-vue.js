@@ -7,7 +7,7 @@
         
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-        
+        <link rel="stylesheet" href="style.css">
         
         <!-- HTML5 shim and script.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: script.js doesn't work if you view the page via file:// -->
@@ -33,12 +33,22 @@
              <div class="ui grid">
                 <div class="six wide column">
                    <div id="todo" class="tasklist">
-                     <div v-for="task in todoTasks">
+                    <div class="ui header">
+                       <i class="icon play circle orange"></i>On The List ({{ todoTasks.length }})
+                    </div>
+                     <div class="ui segment task"
+                          v-bind:class="task.completed? 'done' : 'todo' " 
+                          v-for="task in todoTasks">
                        {{ task.id }}. {{ task.name }}: {{ task.description }} completed? {{ task.completed }}
                      </div>
                    </div>
                    <div id="completed" class="tasklist">
-                     <div v-for="task in completedTasks">
+                      <div class="ui header">
+                       <i class="icon check circle green"></i>In The Basket ({{ completedTasks.length }})
+                      </div>
+                     <div class="ui segment task" 
+                          v-bind:class="task.completed? 'done' : 'todo' "
+                          v-for="task in completedTasks">
                        {{ task.id }}. {{ task.name }}: {{ task.description }} completed? {{ task.completed }}
                      </div>
                    </div>
