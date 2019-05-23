@@ -6,6 +6,14 @@ var app = new Vue({
           { id: 2, name: 'Item 2', description: 'Bread', completed: true},
         ],
         message: 'Hello World'
+    },
+    computed: {
+      completedTasks: function() {
+        return this.tasks.filter( item => item.completed == true);
+      },
+      todoTasks: function() {
+        return this.tasks.filter( item => item.completed == false);
+      }
     }
 })
 
