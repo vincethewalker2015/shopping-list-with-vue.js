@@ -5,9 +5,16 @@
 .task.done {
     background: lightgrey;
     color: #939194;
+    text-decoration: line-through;
 }
 
 .task.todo {
     background: lightgoldenrodyellow;
     color: #627F39;
+}
+
+
+.description {
+    color: slategrey;
+    font-style: italic;
 }
