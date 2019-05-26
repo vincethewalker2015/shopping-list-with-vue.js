@@ -15,7 +15,9 @@ var app = new Vue({
                           </div>
                         </div>
                         <div class="right floated three wide column">
+                          <i class="icon pencil orange" alt="Edit" v-on:click="$parent.editTask($event, task.id)"></i>
                           <i class="icon trash red" alt="Delete" v-on:click="$parent.deleteTask($event, task.id)"></i>
+                          
                         </div>
                       </div>
                  </div>
@@ -27,6 +29,7 @@ var app = new Vue({
           { id: 1, name: 'Item 1', description: 'Milk', completed: false},
           { id: 2, name: 'Item 2', description: 'Bread', completed: true},
         ],
+        task: {},
         message: 'Hello World'
     },
     computed: {
@@ -48,6 +51,14 @@ var app = new Vue({
           console.log('task toggled');
         }
       },
+      editTask: function(event, id){
+        let task = this.tasks.find(item => item.id == id);
+        if(task) {
+          this.task = { name: task.name, description: task.description, completed: task.completed };
+          console.log('task edited');
+        }
+      },
+      
       deleteTask: function(event, id){
         event.stopImmediatePropagation();
         
@@ -60,6 +71,12 @@ var app = new Vue({
         console.log('task deleted');
       }
     }
+    
+    
 });
 
 
+$('.ui.basic.modal')
+      .modal('show')
+    ;
+    

@@ -18,3 +18,21 @@
     color: slategrey;
     font-style: italic;
 }
+
+/* Smartphones (portrait and landscape) ----------- 
+    @media only screen and (min-device-width : 320px) 
+	   and (max-device-width : 480px) {
+    .item {
+        display: none !important;
+    }
+      .mobile-friendly {
+         display: none !important;
+         
+        
+     }
+     
+     
+     
+    }
+
+ */
