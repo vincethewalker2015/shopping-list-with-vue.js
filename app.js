@@ -54,11 +54,26 @@ var app = new Vue({
       editTask: function(event, id){
         let task = this.tasks.find(item => item.id == id);
         if(task) {
-          this.task = { name: task.name, description: task.description, completed: task.completed };
+          this.task = { id: id, 
+                        name: task.name, 
+                        description: task.description, 
+                        completed: task.completed };
+                        
           console.log('task edited');
         }
       },
-      
+      updateTask: function(event, id){
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        let task = this.tasks.find(item => item.id == id);
+        
+        if(task) {
+          task.name = this.task.name;
+          task.description = this.task.description;
+          task.completed = this.task.completed;
+           console.log('task updated');
+        }
+      },
       deleteTask: function(event, id){
         event.stopImmediatePropagation();
         
@@ -76,7 +91,3 @@ var app = new Vue({
 });
 
 
-$('.ui.basic.modal')
-      .modal('show')
-    ;
-    
