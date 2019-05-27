@@ -19,14 +19,19 @@
     <body>
         
         <div id="app" class="pushable">
-            <div class="">
+            <div class="ui sidebar inverted vertical menu visible fixed left">
               <div class="ui logo item">
                  <b><i class="icon shopping bag olive"></i>Shopping List</b>
               </div>
               <div class="item">
-                <!--<div class="ui message orange">
+                <div class="ui message olive">
                   Use this app to go shopping with!
-                </div> -->
+                </div>
+              </div>
+              <div class="item" v-if="message">
+                <div class="ui message violet">
+                  <i class="icon info"></i> {{ message }}
+                </div>
               </div>
             </div>
            <div class="ui container pusher">
@@ -96,7 +101,9 @@
              </div>
            </div>
         </div>
-        
+        <script>
+         
+        </script>
         <script src="app.js"></script>
         
     </body>
