@@ -58,6 +58,7 @@ var app = new Vue({
         }
       },
       editTask: function(event, id){
+        event.stopImmediatePropagation();
         this.action = 'edit';
         
         let task = this.tasks.find(item => item.id == id);
