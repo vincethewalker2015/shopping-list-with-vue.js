@@ -13,6 +13,11 @@
     opacity: 0.2;
 }
 
+.task.done .icon {
+    color: blue;
+    opacity: 0.2;
+}
+
 .task.todo {
     background: lightgoldenrodyellow;
     color: #627F39;
