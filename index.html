@@ -19,7 +19,7 @@
     <body>
         
         <div id="app" class="pushable">
-            <div class="ui sidebar inverted vertical menu visible fixed left">
+            <div class="ui top fixed menu inverted">
               <div class="ui logo item">
                  <b><i class="icon shopping bag olive"></i>Shopping List</b>
               </div>
@@ -36,8 +36,8 @@
             </div>
            <div class="ui container pusher">
              <div class="ui grid">
-                <div class="six wide column">
-                   <div id="todo" class="tasklist">
+                <div class="six wide column ">
+                   <div id="todo" class="tasklist ">
                     <div class="ui header">
                        <i class="icon play circle orange"></i>On The List ({{ todoTasks.length }})
                     </div>
@@ -54,13 +54,13 @@
                           v-for="task in completedTasks" />
                    </div>
                 </div>
-              <div class="six wide column">
-                <div id="editor" class="details ui raise segment grey">
+              <div class="six wide column item-add">
+                <div id="editor" class="details ui raise segment grey ">
                   <div class="ui header grid">
-                    <div class="left floated nine wide column">
+                    <div class="left floated six wide column ">
                       <i class="icon edit orange"></i>Details
                     </div>
-                    <div class="right floated five wide column">
+                    <div class="right floated six wide column">
                       <button class="ui green button right floated" v-on:click="clear">
                         <i class="icon plus circle"></i>New
                       </button>

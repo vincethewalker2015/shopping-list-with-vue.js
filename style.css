@@ -1,3 +1,4 @@
+
 .tasklist {
     padding-top: 2em;
 }
@@ -28,9 +29,12 @@
     color: slategrey;
     font-style: italic;
 }
-
- 
-
+.item-add {
+    margin-top: 80px;
+}
+.tasklist {
+    margin-top: 70px;
+}
 /* Smartphones (portrait and landscape) -----------  
     @media only screen and (min-device-width : 320px) 
 	   and (max-device-width : 480px) {
