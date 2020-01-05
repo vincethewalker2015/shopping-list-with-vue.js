@@ -35,8 +35,8 @@
               </div>
             </div>
            <div class="ui container pusher">
-             <div class="ui grid">
-                <div class="six wide column ">
+             <div class="ui two column centered grid">
+                <div class="">
                    <div id="todo" class="tasklist ">
                     <div class="ui header">
                        <i class="icon play circle orange"></i>On The List ({{ todoTasks.length }})
@@ -54,15 +54,15 @@
                           v-for="task in completedTasks" />
                    </div>
                 </div>
-              <div class="six wide column item-add">
+              <div class=" item-add">
                 <div id="editor" class="details ui raise segment grey ">
                   <div class="ui header grid">
                     <div class="left floated six wide column ">
-                      <i class="icon edit orange"></i>Details
+                      <i class="icon edit orange"></i>Add
                     </div>
                     <div class="right floated six wide column">
                       <button class="ui green button right floated" v-on:click="clear">
-                        <i class="icon plus circle"></i>New
+                        <i class="icon plus circle except-mobile"></i> New
                       </button>
                     </div>
                   </div>
@@ -86,7 +86,7 @@
                         <input type="checkbox" name="completed" v-model="task.completed" />
                       </div>
                       <button class="ui button green">
-                        Submit
+                        Create
                       </button>
                     </form>
                   </div>
